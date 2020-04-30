@@ -158,8 +158,9 @@ add_action( 'wp_enqueue_scripts', 'kmcentre_scripts' );
 /**
  * Implement the Custom Header feature.
  */
+/*
 require get_template_directory() . '/inc/custom-header.php';
-
+*/
 /**
  * Custom template tags for this theme.
  */
@@ -173,6 +174,23 @@ require get_template_directory() . '/inc/template-functions.php';
 /**
  * Customizer additions.
  */
+/*
 require get_template_directory() . '/inc/customizer.php';
+*/
 
+function kmcentre_remove_block_library_css(){
+	wp_dequeue_style( 'wp-block-library' );
+} 
+add_action( 'wp_enqueue_scripts', 'kmcentre_remove_block_library_css' );
 
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> esc_html__( 'Theme General Settings', 'kmcentre' ),
+		'menu_title'	=> esc_html__( 'Theme Settings', 'kmcentre' ),
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+		
+}

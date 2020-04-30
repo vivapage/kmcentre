@@ -1,2 +1,24 @@
 $size__site-main: 100%;
 $size__site-sidebar: 25%;
+
+$minwidth: 320px;
+$mw: 1170;
+$md1: $mw + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+._container {
+  max-width: $mw + px;
+  margin: 0 auto;
+  @media (max-width: $md1 + px) {
+    max-width: 1170px;
+  }
+  @media (max-width: $md2 + px) {
+    max-width: 750px;
+  }
+  @media (max-width: $md3 + px) {
+    max-width: none;
+    padding: 0 10px;
+  }
+}

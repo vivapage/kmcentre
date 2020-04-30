@@ -18,9 +18,6 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
-
-<script src="https://use.fontawesome.com/1e8ecfac9b.js"></script>
-
 </head>
 
 <body <?php body_class(); ?>>
@@ -29,20 +26,6 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'kmcentre' ); ?></a>
 
 	<header id="masthead" class="site-header">
-	<div class="top-header">
-	<div class="top-header__container _container">
-		<div class="top-header__item">UA | RU | EN</div>
-		<div class="top-header__item"><i class="fa fa-phone" aria-hidden="true"></i><span> +38 (044) 272 11 75</span>   <span>+38 (095) 438 68 71</span>   <span>+38 (067) 186 18 70</span></div>
-		<div class="top-header__item"><i class="fa fa-map-marker" aria-hidden="true"></i> м. Київ, вул. Січових Стрільців (Артема), 5-Б, оф. 23</div>
-		<div class="top-header__item"><i class="fa fa-clock-o" aria-hidden="true"></i> пн-пт 9:00 - 20:30  сб 10:00 - 18:00</div>
-		<div class="top-header__item">
-			<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-			<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-			<a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-			<a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>	
-		</div>
-	</div>
-	</div>
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -60,7 +43,7 @@
 				?>
 				<p class="site-description"><?php echo $kmcentre_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
-		</><!-- .site-branding -->
+		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'kmcentre' ); ?></button>

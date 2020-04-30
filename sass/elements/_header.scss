@@ -1,0 +1,24 @@
+.top-header {
+  background: $color__grey;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+  }
+  &__item {
+    color: #fff;
+    font-size: 12px;
+    span {
+      margin: 0 5px 0 0;
+    }
+    a {
+      color: #fff;
+      margin: 0 5px 0 0;
+    }
+    a:hover,
+    a:visited {
+      color: #fff;
+    }
+  }
+}
