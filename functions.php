@@ -242,3 +242,9 @@ function remove_wpml_style() {
 add_action( 'wp_print_styles', 'remove_wpml_style' );
 
 	
+add_action( 'wp_enqueue_scripts', 'kmcentre_method' );
+function kmcentre_method() {
+	wp_deregister_script( 'jquery-core' );
+	wp_register_script( 'jquery-core', 'https://code.jquery.com/jquery-3.5.1.min.js');
+	wp_enqueue_script( 'jquery' );
+}

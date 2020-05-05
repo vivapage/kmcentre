@@ -20,6 +20,7 @@
 
 <script src="https://use.fontawesome.com/1e8ecfac9b.js"></script>
 
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -67,5 +68,8 @@
   </div>
 		</div>
 		</div><!-- .site-branding -->
+
+
+
 		
 	</header><!-- #masthead -->

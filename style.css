@@ -546,7 +546,7 @@ hr {
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
           align-self: flex-start;
-  margin: 0.25rem 0 1rem;
+  margin: 0.75rem 0 1rem;
 }
 
 .actions-content {
@@ -658,6 +658,102 @@ hr {
   border-radius: 1.1875rem;
 }
 
+.overflow_hidden {
+  overflow: hidden;
+  position: relative;
+}
+
+.top-slider {
+  background: #a4d680;
+}
+
+.radius_niz_mini {
+  border-radius: 0 0 100% 100%;
+  display: block;
+  overflow: hidden;
+  margin: 0 -80px;
+  padding: 0 80px;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.radius_niz {
+  border-radius: 0 0 100% 100%;
+  display: block;
+  overflow: hidden;
+  margin: 0 -80px;
+  padding: 0 80px;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  text-align: center;
+}
+
+.radius_row_top:before {
+  content: "";
+  background: #ffffff;
+  position: absolute;
+  width: 100%;
+  height: 430px;
+  left: 0;
+  top: 0;
+  border-radius: 0 0 100% 100%;
+  display: block;
+  overflow: hidden;
+  margin: -305px -90px 0 -90px;
+  padding: 0 90px;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.radius_row_niz:after {
+  content: "";
+  background: #ffffff;
+  position: absolute;
+  width: 120%;
+  height: 430px;
+  left: -12%;
+  bottom: 0;
+  border-radius: 100% 100% 0 0;
+  display: block;
+  overflow: hidden;
+  margin: 0 0px -305px 0px;
+  padding: 0 90px;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.services {
+  padding: 150px 0 0px 0;
+  background: #a4d680;
+  margin-top: -120px;
+}
+
+.services_row {
+  padding-bottom: 150px;
+}
+
+.row::before,
+.row::after {
+  content: " ";
+  display: table;
+  /* clear: both; */
+}
+
+.site-header {
+  position: relative;
+  z-index: 99999;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.site {
+  position: relative;
+  padding-top: 105px;
+}
+
 .top-header {
   background: #707070;
 }
@@ -695,6 +791,10 @@ hr {
 .top-header__item a:hover,
 .top-header__item a:visited {
   color: #fff;
+}
+
+.site-branding {
+  background: #fff;
 }
 
 .site-branding_logo {
