@@ -1,7 +1,5 @@
 .main-navigation {
-	display: block;
-	width: 100%;
-
+	flex: 1 1 auto;
 	ul {
 		display: none;
 		list-style: none;
@@ -10,7 +8,9 @@
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
+			//float: left;
+			display: block;
+			flex-direction: column;
 			position: absolute;
 			top: 100%;
 			left: -999em;
@@ -22,16 +22,16 @@
 			}
 
 			li {
-
 				&:hover > ul,
 				&.focus > ul {
-					display: block;
+					display: flex;
 					left: auto;
 				}
 			}
 
 			a {
 				width: 200px;
+				white-space: nowrap;
 			}
 
 			:hover > a,
@@ -51,15 +51,21 @@
 
 	li {
 		position: relative;
+		margin: 0 15px;
+		justify-content: center;
 
 		&:hover > a,
 		&.focus > a {
 		}
 	}
+	.menu {
+		justify-content: center;
+	}
 
 	a {
-		display: block;
 		text-decoration: none;
+		color: $color__grey;
+		text-transform: uppercase;
 	}
 
 	.current_page_item > a,
@@ -69,6 +75,14 @@
 	}
 }
 
+.menu-item-has-children > a:after {
+	font-family: "FontAwesome";
+	font-size: 12px;
+	content: "\f107";
+	display: inline-block;
+	padding-left: 5px;
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -76,7 +90,6 @@
 }
 
 @media screen and (min-width: 37.5em) {
-
 	.menu-toggle {
 		display: none;
 	}
@@ -89,7 +102,6 @@
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-
 	.site-main & {
 		margin: 0 0 1.5em;
 	}

@@ -12,6 +12,7 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+	<div class="site-footer__container _container">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'kmcentre' ) ); ?>">
 				<?php
@@ -25,6 +26,7 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'kmcentre' ), 'kmcentre', '<a href="http://vivapage.info">vivapage</a>' );
 				?>
 		</div><!-- .site-info -->
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
