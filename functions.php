@@ -195,12 +195,12 @@ if( function_exists('acf_add_options_page') ) {
 		
 }
 
-/* WPML */
+// WPML
 define('ICL_DONT_LOAD_NAVIGATION_CSS', true);
 define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true);
 define('ICL_DONT_LOAD_LANGUAGES_JS', true);
 
-/*Clean HTML */
+//Clean HTML
 
 function itsme_disable_feed() {
 	wp_die( __( 'No feed available, please visit the <a href="'. esc_url( home_url( '/' ) ) .'">homepage</a>!' ) );
@@ -241,7 +241,8 @@ function remove_wpml_style() {
 }
 add_action( 'wp_print_styles', 'remove_wpml_style' );
 
-	
+
+
 add_action( 'wp_enqueue_scripts', 'kmcentre_method' );
 function kmcentre_method() {
 	wp_deregister_script( 'jquery-core' );
