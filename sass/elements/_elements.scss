@@ -367,6 +367,147 @@ hr {
   }
 }
 
+.testimonials {
+  // .testimonials__container
+  &__slider_box {
+    width: 70%;
+  }
+
+  &__container {
+    background-color: $color__brown;
+    overflow: hidden;
+    &._title > h1 {
+      color: #fff;
+      border-bottom: 1px solid #fff;
+    }
+
+    &._block {
+      color: $color__white;
+      margin-bottom: 20px;
+      display: flex;
+    }
+
+    &._nav {
+      display: flex;
+      width: 30%;
+      align-items: flex-end;
+    }
+
+    &._text {
+      .surname {
+        font-size: 1.875em;
+      }
+      .text {
+        margin-top: 15px;
+        a {
+          color: $color__white;
+        }
+      }
+      .date {
+        margin-top: 25px;
+        font-size: 0.9em;
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+.last-post {
+  // .last-post__container
+
+  &__container {
+  }
+
+  // .last-post__row
+
+  &__row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+
+  // .last-post__item
+
+  &__item {
+    // .last-post__item_block
+    width: 100%;
+    padding: 0 15px;
+
+    &_block {
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      background: white;
+      overflow: hidden;
+      a img {
+        transition: all 0.5s ease-out;
+      }
+      a img:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    // .last-post__item_content
+
+    &_content {
+      padding: 20px;
+      &_title {
+        font-size: 20px;
+      }
+      &_date {
+        color: #aaa;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.contact_map_content {
+  position: relative;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.contact_map_info {
+  position: absolute;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
+  padding: 35px 47px 35px;
+  left: 62px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.contact_map_info__title {
+  color: #656565;
+  font-size: 14px;
+  line-height: 28px;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 17px;
+}
+
+.contact_map_info__title::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 30px;
+  background-color: #cccbcb;
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact_map_info__content {
+  color: #201e20;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
 @import "header";
 
 @import "lists";
@@ -374,6 +515,7 @@ hr {
 img {
   height: auto; // Make sure images are scaled correctly.
   max-width: 100%; // Adhere to container width.
+  vertical-align: middle;
 }
 
 figure {
@@ -382,4 +524,4 @@ figure {
 
 @import "tables";
 
-//@import "bxslider";
+@import "footer";

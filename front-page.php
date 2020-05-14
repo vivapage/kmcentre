@@ -66,8 +66,6 @@ get_header();
 							</div>
 						</div>
 			</div>	
-
-
 			</div>
 		</div>
 	</div>
@@ -81,11 +79,10 @@ get_header();
 				<div class="slider-services__image">
 						<div class="slider-services__image-one">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/services/stomat-1.jpg" alt="">
-						</div><!-- /.slider-services__image-one -->
+						</div>
 						<div class="slider-services__image-two">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/services/stomat-2.jpg" alt="">
-						</div><!-- /.slider-services__image-two -->
-						
+						</div>
 				</div>
 				<div class="slider-services__text-block"><h4><?php esc_html_e( 'СТОМАТОЛОГІЯ', 'kmcentre' ); ?></h4><p><?php esc_html_e( 'Ми дбаємо про здоров’я і красивої усмішці наших пацієнтів, 
 застосовуючи найкращі досягнення сучасної стоматології 
@@ -176,8 +173,9 @@ get_header();
 			<span></span>
 			</div>
 		</div>
-	
-	<div class="about__container _container">
+	</div>
+	<div class="site-main__container _container">
+	<div class="about__container ">
 		<div class="about__title"><h1><?php esc_html_e( 'Про центр', 'kmcentre' ); ?></h1>
 		</div>
 		<div class="about__block">
@@ -200,6 +198,134 @@ get_header();
 			</div>
 		</div>
 	</div>
+	</div>
+
+	<div class="testimonials__container">
+		<div class="_container">
+			<div class="testimonials__container _title"><h1><?php esc_html_e( 'Відгуки', 'kmcentre' ); ?></h1></div>
+				<div class="testimonials__container _block">
+					<div class="testimonials__container _nav">
+					<a class="tm-prev" href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="45" height="65" fill="#fff"><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg></a>
+					<a class="tm-next" href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="45" height="65" fill="#fff"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a>
+					</div>
+
+					<div class="testimonials__slider_box">
+					<div class="testimonials__slider">
+					<?php
+					$args = array(
+						'post_type'	=> array( 'testimonials' ),
+						'post_status'	=> array( 'publish' ),
+						'posts_per_page'	=> 5,
+					);
+
+					// The Query
+					$query = new WP_Query( $args );
+
+					// The Loop
+					if ( $query->have_posts() ) {
+						while ( $query->have_posts() ) {
+							$query->the_post();
+?>							
+
+							<div class="testimonials__container _text">
+						<div class="surname"><?php echo  get_the_title(); ?></div>
+						<div class="text"><?php echo get_the_excerpt(); ?></div>
+						<div class="date"><?php echo   get_the_date(); ?></div>
+					</div>
+							
+							
+							<?php
+						}
+
+					}
+					wp_reset_postdata();
+					?>
+
+
+
+					</div>
+					</div>
+
+				</div>
+			</div>
+	</div>
+
+	<div class="site-main__container _container">
+	<div class="last-post__container">
+		<div class="last-post _title"><h1><?php esc_html_e( 'Свіжі новини', 'kmcentre' ); ?></h1></div>
+			<div class="last-post__row">
+			<?php // WP_Query arguments
+				$args = array(
+					'post_type'              => array( 'post' ),
+					'post_status'            => array( 'publish' ),
+					'posts_per_page'         => '3',
+				);
+
+				// The Query
+				$query = new WP_Query( $args );
+
+				// The Loop
+				if ( $query->have_posts() ) {
+					while ( $query->have_posts() ) {
+						$query->the_post();
+						// do something
+
+				?>
+				<!-- Start Last Post Item -->
+				<div class="last-post__item">
+					<div class="last-post__item_block">
+						<a href="<?php echo get_permalink(); ?>" class="radius_niz"><img src="<?php the_post_thumbnail_url( 'list-post' ); ?>" alt=""></a>
+						<div class="last-post__item_content">
+							<a href="<?php echo get_permalink(); ?>" class="last-post__item_content_title"><?php echo  get_the_title(); ?></a>
+							<div class="last-post__item_content_date"><?php echo   get_the_date(); ?></div>
+							<div class="last-post__item_content_desk"><?php echo get_the_excerpt(); ?></div>
+						</div>
+					</div>
+				</div>
+<!-- End Last Post Item -->
+
+				<?php
+									}
+								}
+
+				// Restore original Post Data
+				wp_reset_postdata();
+			?>
+		
+			</div>
+		</div>
+	</div>
+
+	<div class="site-main__container _container">
+		<div class="site-main__decor block-decor">
+			<div class="block-decor__items">
+			<span></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="site-main__container _container">
+	<div class="contact-block__container">
+		<div class="contact-block _title"><h1><?php esc_html_e( 'Зв’язатися з нами', 'kmcentre' ); ?></h1></div>
+		<div class="contact_map_content">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1270.1214599539583!2d30.504390000000004!3d50.455201!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x766665fb792fc659!2z0JrRgNCw0LLRh9C10L3QutC-INCc0LXQtNC40LrQsNC7INCm0LXQvdGC0YAgKEtyYXZjaGVua28gTWVkaWNhbCBDZW50cmUpIERlbnRhbCBjbGluaWMgL9CS0LfRgNC-0YHQu9Cw0Y8g0YHRgtC-0LzQsNGC0L7Qu9C-0LPQuNGP!5e0!3m2!1sru!2sua!4v1589293653877!5m2!1sru!2sua" width="1170" height="490" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			<div class="contact_map_info">
+			<div class="contact_map_info__title"><?php esc_html_e( 'Phone', 'kmcentre' ); ?></div>
+			<div class="contact_map_info__content">+38 (044) 272 11 75<br>+38 (095) 438 68 71<br>+38 (067) 186 18 70</div>
+			<div class="contact_map_info__title"><?php esc_html_e( 'Email', 'kmcentre' ); ?></div>
+			<div class="contact_map_info__content">kmcentre1@gmail.com</div>
+			<div class="contact_map_info__title"><?php esc_html_e( 'Address', 'kmcentre' ); ?></div>
+			<div class="contact_map_info__content">М. Київ,<br>Вул. Січових Стрільців (Артема), 5-Б, <br>оф. 23</div>
+
+			</div>
+		</div>
+			
+		</div>
+	</div>
+	
+
+
+
 </div>
 	
 </main>

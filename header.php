@@ -32,7 +32,7 @@
 		<div class="top-header__item"><?php do_action('wpml_add_language_selector');?></div>
 		<div class="top-header__item"><i class="fa fa-phone" aria-hidden="true"></i><span> +38 (044) 272 11 75</span>   <span>+38 (095) 438 68 71</span>   <span>+38 (067) 186 18 70</span></div>
 		<div class="top-header__item"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php esc_html_e('м. Київ, вул. Січових Стрільців (Артема), 5-Б, оф. 23', 'kmcentre' ); ?></div>
-		<div class="top-header__item"><i class="fa fa-clock-o" aria-hidden="true"></i> пн-пт 9:00 - 20:30  сб 10:00 - 18:00</div>
+		<div class="top-header__item"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php esc_html_e( 'пн-пт', 'kmcentre' ); ?> 9:00 - 20:30  <?php esc_html_e( 'сб', 'kmcentre' ); ?> 10:00 - 18:00</div>
 		<div class="top-header__item">
 			<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 			<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -64,7 +64,7 @@
 		</nav><!-- #site-navigation -->
 		<div class="site-branding_button">
 		<div class="actions">
-    <div class="actions-content"><a class="btn rounded" href="#"><span>Записатися на прийом </span></a></div>
+    <div class="actions-content"><a class="btn rounded" href="#"><span><?php esc_html_e( 'Записатися на прийом', 'kmcentre' ); ?> </span></a></div>
   </div>
 		</div>
 		</div><!-- .site-branding -->

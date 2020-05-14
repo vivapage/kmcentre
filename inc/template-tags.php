@@ -163,3 +163,16 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+
+function kmcentre_custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'kmcentre_custom_excerpt_length', 999 );
+
+// Changing excerpt more
+function new_excerpt_more($more) {
+	global $post;
+	return ' <a class="more" href="'. get_permalink($post->ID) . '">' . '[&hellip;]' . '</a>';
+	}
+	add_filter('excerpt_more', 'new_excerpt_more');

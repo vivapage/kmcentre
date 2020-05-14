@@ -47,10 +47,13 @@ if ( ! function_exists( 'kmcentre_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		add_image_size( 'list-post', 390, 220, true );
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'kmcentre' ),
+				'footer' => esc_html__( 'Footer menu', 'kmcentre' ),
 			)
 		);
 
@@ -172,11 +175,11 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
- * Customizer additions.
+ * Post type additions.
  */
-/*
-require get_template_directory() . '/inc/customizer.php';
-*/
+
+require get_template_directory() . '/inc/post-type.php';
+
 
 function kmcentre_remove_block_library_css(){
 	wp_dequeue_style( 'wp-block-library' );
