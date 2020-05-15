@@ -61,6 +61,14 @@ ul {
   margin: 0;
 }
 
+.page__container {
+  position: relative;
+  background-color: #fff;
+  z-index: 100;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 ._container {
   max-width: 1170px;
   margin: 0 auto;
@@ -1105,6 +1113,25 @@ hr {
   margin-bottom: 20px;
 }
 
+.page-header {
+  height: 200px;
+}
+
+.page-header__image {
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-header__container {
+  padding: 20px;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, white), to(rgba(255, 255, 255, 0)));
+  background-image: -o-linear-gradient(left, white 20%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(to right, white 20%, rgba(255, 255, 255, 0) 100%);
+}
+
 .site-header {
   position: relative;
   z-index: 99999;
@@ -1235,6 +1262,22 @@ dt {
 
 dd {
   margin: 0 1.5em 1.5em;
+}
+
+li {
+  margin: 0.5rem 0 0 2rem;
+  position: relative;
+}
+
+.site-main li:before {
+  content: " ";
+  background-size: cover;
+  background-image: url("./images/bullet.svg");
+  width: 0.8rem;
+  height: 0.8rem;
+  top: 0.2rem;
+  position: absolute;
+  left: -1.5rem;
 }
 
 img {
@@ -1460,8 +1503,8 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul {
-  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
   display: block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1472,12 +1515,21 @@ a:hover, a:active {
   top: 100%;
   left: -999em;
   z-index: 99999;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .main-navigation ul ul ul {
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 100%;
   left: -999em;
-  top: 0;
+  z-index: 99999;
+  background-color: #fff;
 }
 
 .main-navigation ul ul li:hover > ul,
@@ -1487,6 +1539,7 @@ a:hover, a:active {
   display: -ms-flexbox;
   display: flex;
   left: auto;
+  left: 100px;
 }
 
 .main-navigation ul ul a {
@@ -1506,6 +1559,7 @@ a:hover, a:active {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 5px 0;
 }
 
 .main-navigation .menu {
@@ -1579,6 +1633,15 @@ a:hover, a:active {
   -webkit-flex: 1 0 50%;
       -ms-flex: 1 0 50%;
           flex: 1 0 50%;
+}
+
+#breadcrumbs {
+  font-size: 0.8em;
+  color: #ccc;
+}
+
+#breadcrumbs a {
+  color: #aaa;
 }
 
 /*--------------------------------------------------------------

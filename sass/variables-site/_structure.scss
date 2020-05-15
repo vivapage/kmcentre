@@ -8,6 +8,14 @@ $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
+.page__container {
+  position: relative;
+  background-color: #fff;
+  z-index: 100;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 ._container {
   max-width: $mw + px;
   margin: 0 auto;

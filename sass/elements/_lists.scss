@@ -23,3 +23,19 @@ dt {
 dd {
 	margin: 0 1.5em 1.5em;
 }
+
+li {
+	margin: 0.5rem 0 0 2rem;
+	position: relative;
+}
+
+.site-main li:before {
+	content: " ";
+	background-size: cover;
+	background-image: url("./images/bullet.svg");
+	width: 0.8rem;
+	height: 0.8rem;
+	top: 0.2rem;
+	position: absolute;
+	left: -1.5rem;
+}
