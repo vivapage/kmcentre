@@ -18,9 +18,15 @@ get_header();
     <?php $attachment_id = get_field('header_cat_serv');
     $size = "header";
     $image = wp_get_attachment_image_src($attachment_id, $size);
+    $header_image = $image[0];
+    if ($header_image) {
+      $header_image = $header_image;
+    } else {
+      $header_image = get_template_directory_uri() . '/images/services/fon.jpg';
+    }
     ?>
     <header class="page-header">
-      <div class="page-header__image" style="background-image: url('<?php echo $image[0]; ?>');">
+      <div class="page-header__image" style="background-image: url('<?php echo $header_image; ?>');">
         <div class="page-header__container">
 
           <?php

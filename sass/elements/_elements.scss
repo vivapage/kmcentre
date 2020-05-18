@@ -99,6 +99,13 @@ hr {
   }
 }
 
+.page-title {
+  text-transform: lowercase;
+  &:first-letter {
+    text-transform: capitalize;
+  }
+}
+
 .overflow_hidden {
   overflow: hidden;
   position: relative;
@@ -159,21 +166,21 @@ hr {
   transform: translateZ(0);
 }
 
-.services {
+.services-block {
   padding: 150px 0 0px 0;
   background: $color__green;
   margin-top: -120px;
   margin-bottom: -130px;
 }
 
-.services__container ._slogan {
+.services-block__container ._slogan {
   color: #fff;
   text-align: center;
   margin: 0 0 20px 0;
   font-size: 1.3rem;
   font-weight: 100;
 }
-.services_row {
+.services-block_row {
   padding-bottom: 150px;
 }
 

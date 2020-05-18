@@ -29,7 +29,7 @@ li {
 	position: relative;
 }
 
-.site-main li:before {
+.site-main ul li:before {
 	content: " ";
 	background-size: cover;
 	background-image: url("./images/bullet.svg");
